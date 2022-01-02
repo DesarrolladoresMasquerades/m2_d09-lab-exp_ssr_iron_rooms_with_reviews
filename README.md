@@ -39,6 +39,7 @@ Add the `.env` file
 ```text
 PORT = 3000
 MONGODB_URI=<mongo connection string with username, password and dbname>
+EXPRESS_SESSION_SECRET=<Use a random string here>
 CLOUDINARY_NAME=<name form cloudinary dashboard>
 CLOUDINARY_KEY=<key form cloudinary dashboard>
 CLOUDINARY_SECRET=<secret form cloudinary dashboard>

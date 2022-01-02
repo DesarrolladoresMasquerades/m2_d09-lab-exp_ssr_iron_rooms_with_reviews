@@ -23,6 +23,9 @@ const MongoStore = require("connect-mongo");
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ironrooms";
 
+const EXPRESS_SESSION_SECRET =
+  process.env.EXPRESS_SESSION_SECRET || "SessionSecret";
+
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -49,7 +52,7 @@ module.exports = (app) => {
 
   app.use(
     session({
-      secret: "SessionSecret",
+      secret: EXPRESS_SESSION_SECRET,
       resave: true,
       saveUninitialized: true,
       cookie: {
